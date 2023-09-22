@@ -2,11 +2,16 @@
   "name": "test-task",
   "version": "1.0.0",
   "description": "",
+  "repository": {
+    "url": "git+https://github.com/Tsekhmister/test-task.git"
+  },
   "main": "index.js",
   "scripts": {
     "start": "webpack --mode=development",
     "build": "webpack --mode=production",
-    "prod": "webpack-dev-server --mode production"
+    "prod": "webpack-dev-server --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +22,7 @@
     "@babel/preset-env": "^7.22.20",
     "@babel/preset-react": "^7.22.15",
     "css-loader": "^6.8.1",
+    "gh-pages": "^6.0.0",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
     "node-sass": "^9.0.0",
