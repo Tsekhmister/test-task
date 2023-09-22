@@ -1,0 +1,24 @@
+body,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+.app-container {
+  &__wrapper {
+    display: flex;
+    &__aside {
+      flex: 1;
+      @media only screen and (max-width: 600px) {
+        min-width: 500px;
+      }
+    }
+    &__main {
+      flex: 6;
+    }
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+  height: 100vh;
+  margin-left: 1rem;
+}
